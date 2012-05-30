@@ -15,8 +15,8 @@ import java.util.HashMap;
 public class InitDictionary {
 
     public void readDictionaryFile() {
-        HashMap<String, String> dict = new HashMap<String, String>();
-        BinarySearchTree t = new BinarySearchTree( );
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        //BinarySearchTree t = new BinarySearchTree( );
         File file = new File("OWL2.txt");
         StringBuffer contents = new StringBuffer();
         BufferedReader reader = null;
@@ -30,7 +30,9 @@ public class InitDictionary {
                 contents.append(text)
                         .append(System.getProperty(
                                 "line.separator"));
-                t.insert(text);
+                word = text.split(" ")[0];
+                //t.insert(word);
+                map.put(word,word.length());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -46,6 +48,20 @@ public class InitDictionary {
             }
         }
 
-        System.out.println("***"+t.find("UNPROBLEMATIC"));
+/*        System.out.println("***"+t.find("AA"));
+        System.out.println("***"+t.find("UNSPECTACULAR"));
+        System.out.println("***"+t.find("SAGGERED"));
+        System.out.println("***"+t.find("SABAYONS"));
+        System.out.println("***"+t.find("POTENTIATE"));
+        System.out.println("***"+t.find("CLATTER"));
+        System.out.println("***"+t.find("CLEARLY"));*/
+
+        System.out.println("***"+map.get("AA"));
+        System.out.println("***"+map.get("UNSPECTACULAR"));
+        System.out.println("***"+map.get("SAGGERED"));
+        System.out.println("***"+map.get("SABAYONS"));
+        System.out.println("***"+map.get("POTENTIATE"));
+        System.out.println("***"+map.get("CLATTER"));
+        System.out.println("***"+map.get("CLEARLY"));
     }
 }
