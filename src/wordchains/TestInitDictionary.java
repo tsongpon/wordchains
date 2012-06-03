@@ -17,6 +17,8 @@ public class TestInitDictionary {
 
     @Test
     public void testReadDictionaryFile() {
-        initDictionary.readDictionaryFile();
+        initDictionary.findChains("CAT","DOG");
+        //initDictionary.findChains("CODE","RUBY");
+        //initDictionary.findChains("SACK","SACS");
     }
 }

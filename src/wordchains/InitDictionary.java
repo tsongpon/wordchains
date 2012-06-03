@@ -1,22 +1,19 @@
 package wordchains;
 
-import wordchains.data.BinarySearchTree;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.*;
 
 /**
  *
  */
 public class InitDictionary {
 
-    public void readDictionaryFile() {
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
-        //BinarySearchTree t = new BinarySearchTree( );
+    public List<String> readDictionaryAndInitData(int worSize) {
+        List<String> wordList = new ArrayList<String>();
         File file = new File("OWL2.txt");
         StringBuffer contents = new StringBuffer();
         BufferedReader reader = null;
@@ -27,12 +24,12 @@ public class InitDictionary {
 
             String word;
             while ((text = reader.readLine()) != null) {
-                contents.append(text)
-                        .append(System.getProperty(
-                                "line.separator"));
                 word = text.split(" ")[0];
-                //t.insert(word);
-                map.put(word,word.length());
+                if (worSize == word.length()) {
+                    wordList.add(word);
+                } else if (word.length() > worSize) {
+                    break;
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -47,21 +44,45 @@ public class InitDictionary {
                 e.printStackTrace();
             }
         }
+        return wordList;
+    }
 
-/*        System.out.println("***"+t.find("AA"));
-        System.out.println("***"+t.find("UNSPECTACULAR"));
-        System.out.println("***"+t.find("SAGGERED"));
-        System.out.println("***"+t.find("SABAYONS"));
-        System.out.println("***"+t.find("POTENTIATE"));
-        System.out.println("***"+t.find("CLATTER"));
-        System.out.println("***"+t.find("CLEARLY"));*/
 
-        System.out.println("***"+map.get("AA"));
-        System.out.println("***"+map.get("UNSPECTACULAR"));
-        System.out.println("***"+map.get("SAGGERED"));
-        System.out.println("***"+map.get("SABAYONS"));
-        System.out.println("***"+map.get("POTENTIATE"));
-        System.out.println("***"+map.get("CLATTER"));
-        System.out.println("***"+map.get("CLEARLY"));
+    public String findChains(String start, String end) {
+        List<String> candidateList = readDictionaryAndInitData(start.length());
+        if (!candidateList.contains(start) || !candidateList.contains(end)) {
+            System.out.println("Not in dictionary.");
+            return null;
+        }
+        List<String> result = new ArrayList<String>();
+        result.add(start);
+        for (int i = 0; i < start.length(); i++) {
+            String pattern = buildPattern(start, end, i);
+            for (String w : candidateList) {
+                if (w.matches(pattern)) {
+                    start = w;
+                    result.add(w);
+                    break;
+                }
+            }
+        }
+        result.add(end);
+        Iterator iterator = result.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        return null;
+    }
+
+    private String buildPattern(String start, String end, int pos) {
+        char[] startCharArray = start.toCharArray();
+        char[] endCharArray = end.toCharArray();
+        startCharArray[pos] = endCharArray[pos];
+        StringBuilder patternBuilder = new StringBuilder();
+        for (char c : startCharArray) {
+            patternBuilder.append(c);
+        }
+        return patternBuilder.toString();
     }
 }
