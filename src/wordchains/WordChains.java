@@ -13,17 +13,17 @@ import java.util.*;
 public class WordChains {
 
     public String findChains(final String start, final String end) {
-        List<String> candidateList = initData(start.length());
-        if (!candidateList.contains(start) || !candidateList.contains(end)) {
+        HashMap<String, String> candidateMap = initData(start.length());
+        if (candidateMap.get(start) == null || candidateMap.get(end) == null) {
             throw new WordChainsException("Word not found in dictionary.");
         }
-        if(start.length() != end.length()) {
+        if (start.length() != end.length()) {
             throw new WordChainsException("Start and End word have to save length.");
         }
         boolean reverse = start.compareTo(end) > 0;
         String startChain = start;
         String endChain = end;
-        if(reverse) {
+        if (reverse) {
             String temp;
             temp = endChain;
             endChain = startChain;
@@ -34,16 +34,14 @@ public class WordChains {
 
         for (int i = 0; i < start.length(); i++) {
             String pattern = buildPattern(startChain, endChain, i);
-            for (String w : candidateList) {
-                if (w.matches(pattern)) {
-                    startChain = w;
-                    result.add(w);
-                    break;
-                }
+            String word = candidateMap.get(pattern);
+            if (word != null) {
+                startChain = word;
+                result.add(word);
             }
         }
 
-        if(isChainValid(startChain, endChain)) {
+        if (isChainValid(startChain, endChain)) {
             result.add(endChain);
             return produceOutput(result, reverse);
         }
@@ -63,18 +61,18 @@ public class WordChains {
     }
 
     private boolean isChainValid(String lastWord, String end) {
-        if(lastWord.equals(end)) {
+        if (lastWord.equals(end)) {
             return true;
         }
         int changeCount = 0;
-        char [] lastWordCharArray = lastWord.toCharArray();
-        char [] endWordCharArray = end.toCharArray();
-        for(int i=0;i<lastWordCharArray.length;i++) {
-            if(lastWordCharArray[i] != endWordCharArray[i]) {
-                changeCount ++;
+        char[] lastWordCharArray = lastWord.toCharArray();
+        char[] endWordCharArray = end.toCharArray();
+        for (int i = 0; i < lastWordCharArray.length; i++) {
+            if (lastWordCharArray[i] != endWordCharArray[i]) {
+                changeCount++;
             }
         }
-        if(changeCount > 1) {
+        if (changeCount > 1) {
             return false;
         }
         return true;
@@ -84,14 +82,14 @@ public class WordChains {
         StringBuilder outputBuilder = new StringBuilder();
         Iterator iterator = resultSet.iterator();
         while (iterator.hasNext()) {
-            if(outputBuilder.length() != 0) {
-                if(reverse) {
+            if (outputBuilder.length() != 0) {
+                if (reverse) {
                     outputBuilder.insert(0, "-");
-                }  else {
+                } else {
                     outputBuilder.append("-");
                 }
             }
-            if(reverse) {
+            if (reverse) {
                 outputBuilder.insert(0, iterator.next());
             } else {
                 outputBuilder.append(iterator.next());
@@ -100,8 +98,8 @@ public class WordChains {
         return outputBuilder.toString();
     }
 
-    private List<String> initData(int worSize) {
-        List<String> wordList = new ArrayList<String>();
+    private HashMap<String, String> initData(int worSize) {
+        HashMap<String, String> wordList = new HashMap<String, String>();
         File file = new File("OWL2.txt");
         BufferedReader reader = null;
 
@@ -113,7 +111,7 @@ public class WordChains {
             while ((text = reader.readLine()) != null) {
                 word = text.split(" ")[0];
                 if (worSize == word.length()) {
-                    wordList.add(word);
+                    wordList.put(word, word);
                 } else if (word.length() > worSize) {
                     break;
                 }

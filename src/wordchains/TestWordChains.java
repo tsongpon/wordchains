@@ -17,14 +17,10 @@ public class TestWordChains {
 
     @Test
     public void testFindChainSuccess() {
-        System.out.println(wordChains.findChains("CODE", "RUBY"));
-        System.out.println(wordChains.findChains("DOG","CAT"));
-        System.out.println(wordChains.findChains("SACK","SACS"));
+        System.out.println(wordChains.findChains("DIT","AIL"));
+/*        System.out.println(wordChains.findChains("DOG","CAT"));
+        System.out.println(wordChains.findChains("CAT","DOG"));
+        System.out.println(wordChains.findChains("SACK","SACS"));*/
     }
 
-    @Test
-    public void testFindChainNoChain() {
-        System.out.println(wordChains.findChains("DIT","PUP"));
-        System.out.println(wordChains.findChains("RUBY","CODE"));
-    }
 }
