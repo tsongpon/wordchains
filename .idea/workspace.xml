@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38ab51b2-e74a-4af2-8cd1-9bba1b4b08b3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordchains/data/BinarySearchTree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordchains/data/DuplicateItemException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordchains/data/ItemNotFoundException.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wordchains/TestWordChains.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordchains/TestInitDictionary.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/wordchains/InitDictionary.java" afterPath="$PROJECT_DIR$/src/wordchains/WordChains.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OWL2.txt" afterPath="$PROJECT_DIR$/OWL2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordchains/InitDictionary.java" afterPath="$PROJECT_DIR$/src/wordchains/InitDictionary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordchains/TestInitDictionary.java" afterPath="$PROJECT_DIR$/src/wordchains/TestInitDictionary.java" />
     </list>
     <ignored path="wordchains.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,26 +64,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InitDictionary.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/wordchains/InitDictionary.java">
+      <file leaf-file-name="WordChains.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/wordchains/WordChains.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="9" selection-start="1629" selection-end="1629" vertical-scroll-proportion="-0.507732">
+            <state line="12" column="85" selection-start="223" selection-end="223" vertical-scroll-proportion="-3.3213367">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#339#347#0" expanded="true" />
-                <element signature="e#1673#1681#0" expanded="true" />
+                <element signature="e#1833#1841#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestInitDictionary.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wordchains/TestInitDictionary.java">
+      <file leaf-file-name="TestWordChains.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wordchains/TestWordChains.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="10" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="20" column="59" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,7 +87,7 @@
       <file leaf-file-name="OWL2.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OWL2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4139" column="4" selection-start="172316" selection-end="172320" vertical-scroll-proportion="0.0">
+            <state line="298" column="9" selection-start="12931" selection-end="12934" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -117,8 +111,10 @@
         <option value="$PROJECT_DIR$/src/wordchains/data/ItemNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/wordchains/data/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/OWL2.txt" />
-        <option value="$PROJECT_DIR$/src/wordchains/TestInitDictionary.java" />
         <option value="$PROJECT_DIR$/src/wordchains/InitDictionary.java" />
+        <option value="$PROJECT_DIR$/src/wordchains/TestInitDictionary.java" />
+        <option value="$PROJECT_DIR$/src/wordchains/TestWordChains.java" />
+        <option value="$PROJECT_DIR$/src/wordchains/WordChains.java" />
       </list>
     </option>
   </component>
@@ -143,7 +139,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -154,57 +150,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -223,7 +169,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestInitDictionary">
+  <component name="RunManager" selected="JUnit.TestWordChains">
     <configuration default="false" name="TestInitDictionary" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -276,6 +222,34 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="wordchains" />
       <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestWordChains" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="wordchains.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="wordchains" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="wordchains" />
+      <option name="MAIN_CLASS_NAME" value="wordchains.TestWordChains" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -400,9 +374,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestInitDictionary" />
       <item index="1" class="java.lang.String" itemvalue="Application.BinarySearchTree" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestWordChains" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -435,11 +410,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6345566" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24918832" sideWeight="0.6330275" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36697248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36544344" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -523,48 +498,36 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/Before.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="286" selection-end="286" vertical-scroll-proportion="0.24793388">
-          <folding />
-        </state>
+        <state line="7" column="2" selection-start="286" selection-end="286" vertical-scroll-proportion="0.24793388" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-6-sun/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="18" selection-start="10329" selection-end="10329" vertical-scroll-proportion="0.33247423">
-          <folding />
-        </state>
+        <state line="217" column="18" selection-start="10329" selection-end="10329" vertical-scroll-proportion="0.33247423" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-6-sun/src.zip!/java/util/Set.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="16" selection-start="4502" selection-end="4502" vertical-scroll-proportion="0.33247423">
-          <folding />
-        </state>
+        <state line="108" column="16" selection-start="4502" selection-end="4502" vertical-scroll-proportion="0.33247423" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OWL2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4139" column="4" selection-start="172316" selection-end="172320" vertical-scroll-proportion="0.0">
+        <state line="298" column="9" selection-start="12931" selection-end="12934" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordchains/TestWordChains.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="59" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordchains/TestInitDictionary.java">
+    <entry file="file://$PROJECT_DIR$/src/wordchains/WordChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="10" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
+        <state line="12" column="85" selection-start="223" selection-end="223" vertical-scroll-proportion="-3.3213367">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordchains/InitDictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="9" selection-start="1629" selection-end="1629" vertical-scroll-proportion="-0.507732">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#339#347#0" expanded="true" />
-            <element signature="e#1673#1681#0" expanded="true" />
+            <element signature="e#1833#1841#0" expanded="true" />
           </folding>
         </state>
       </provider>
