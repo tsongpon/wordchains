@@ -25,5 +25,6 @@ public class TestWordChains {
     @Test
     public void testFindChainNoChain() {
         System.out.println(wordChains.findChains("DIT","PUP"));
+        System.out.println(wordChains.findChains("RUBY","CODE"));
     }
 }
