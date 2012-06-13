@@ -5,19 +5,20 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.Iterator;
+import java.util.*;
 
 /**
  *
  */
 public class WordChains {
 
+    private List<String> candidateList = null;
+    private List<String> chainListFromStart = null;
+    private List<String> chainListFromEnd = null;
+
     public String findChains(final String start, final String end) {
-        HashMap<String, String> candidateMap = initData(start.length());
-        if (candidateMap.get(start) == null || candidateMap.get(end) == null) {
+        candidateList = initData(start.length());
+        if (!candidateList.contains(start) || !candidateList.contains(end)) {
             throw new WordChainsException("Word not found in dictionary.");
         }
         if (start.length() != end.length()) {
@@ -35,12 +36,36 @@ public class WordChains {
         LinkedHashSet<String> result = new LinkedHashSet<String>();
         result.add(startChain);
 
+        boolean found = false;
         for (int i = 0; i < start.length(); i++) {
             String pattern = buildPattern(startChain, endChain, i);
-            String word = candidateMap.get(pattern);
-            if (word != null) {
-                startChain = word;
-                result.add(word);
+            for (String w : candidateList) {
+                if (w.matches(pattern)) {
+                    //System.out.println("Found word : " + w);
+                    found = true;
+                    startChain = w;
+                    result.add(w);
+                    break;
+                }
+            }
+        }
+
+        if (!found) {
+
+            findWordStart(start);
+            findWordEnd(end);
+            System.out.println("Found :: " + found);
+            System.out.println("Chain List :: " + chainListFromStart.size());
+            for(String chain : chainListFromStart) {
+                System.out.println("Chain : "+chain);
+                //findChains(chain, end);
+            }
+
+            System.out.println("Found END :: " + found);
+            System.out.println("Chain List END :: " + chainListFromEnd.size());
+            for(String chain : chainListFromEnd) {
+                System.out.println("Chain END : "+chain);
+                //findChains(chain, end);
             }
         }
 
@@ -50,6 +75,25 @@ public class WordChains {
         }
 
         return "No chains";
+    }
+
+
+    private void findWordStart(String start) {
+        chainListFromStart = new ArrayList<String>();
+        for (String w : candidateList) {
+            if (isChainValid(start, w)) {
+                chainListFromStart.add(w);
+            }
+        }
+    }
+
+    private void findWordEnd(String end) {
+        chainListFromEnd = new ArrayList<String>();
+        for (String w : candidateList) {
+            if (isChainValid(end, w)) {
+                chainListFromEnd.add(w);
+            }
+        }
     }
 
     private String buildPattern(String start, String end, int pos) {
@@ -101,8 +145,8 @@ public class WordChains {
         return outputBuilder.toString();
     }
 
-    private HashMap<String, String> initData(int worSize) {
-        HashMap<String, String> wordList = new HashMap<String, String>();
+    private List<String> initData(int worSize) {
+        List<String> wordList = new ArrayList<String>();
         File file = new File("OWL2.txt");
         BufferedReader reader = null;
 
@@ -114,7 +158,7 @@ public class WordChains {
             while ((text = reader.readLine()) != null) {
                 word = text.split(" ")[0];
                 if (worSize == word.length()) {
-                    wordList.put(word, word);
+                    wordList.add(word);
                 } else if (word.length() > worSize) {
                     break;
                 }
