@@ -14,13 +14,39 @@ import java.util.List;
 public class WordChain {
 
     private TreeNode wordTree;
+    List<String> wordList;
+    private List<String> testList = new ArrayList<String>();
 
-    private void initTree(String startWord) {
-        wordTree = new TreeNode();
+    public String findWordChain(String startWord, String endWord) {
+        wordList = initData(startWord.length());
+        System.out.println("List size before : "+wordList.size());
+        initTree(startWord);
+        for(String s:testList) {
+            System.out.println(s);
+        }
+        System.out.println("List size after : "+wordList.size());
 
+        System.out.println("*************************************");
+        wordList = testList;
+        System.out.println("List size before : "+wordList.size());
+        initTree(startWord);
+        for(String s:testList) {
+            System.out.println(s);
+        }
+        System.out.println("List size after : "+wordList.size());
+        return "";
     }
 
-    private List<String> listAllChain(String parentWord, List<String> wordList) {
+    private void initTree(String startWord) {
+        //wordTree = new TreeNode();
+            List<String> chainList = listAllChain(startWord);
+            for(String s : chainList) {
+                testList.add(s);
+                wordList.remove(s);
+            }
+    }
+
+    private List<String> listAllChain(String parentWord) {
         List<String> chainList = new ArrayList<String>();
         for(String word : wordList) {
             if(isChainValid(parentWord, word)) {
@@ -32,7 +58,7 @@ public class WordChain {
 
     private boolean isChainValid(String lastWord, String end) {
         if (lastWord.equals(end)) {
-            return true;
+            return false;
         }
         int changeCount = 0;
         char[] lastWordCharArray = lastWord.toCharArray();
@@ -42,10 +68,10 @@ public class WordChain {
                 changeCount++;
             }
         }
-        if (changeCount > 1) {
-            return false;
+        if (changeCount == 1) {
+            return true;
         }
-        return true;
+        return false;
     }
 
     private List<String> initData(int worSize) {
