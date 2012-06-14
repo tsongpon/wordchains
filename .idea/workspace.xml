@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490b8d13-2a4a-4143-b080-a95a949c2efc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordchains/TestWordChains.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordchains/WordChains.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordchains/WordChainsException.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newwordchain/WordChain.java" afterPath="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
     </list>
     <ignored path="wordchains.iws" />
@@ -67,14 +63,14 @@
       <file leaf-file-name="WordChain.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="20" selection-start="1276" selection-end="1276" vertical-scroll-proportion="1.7398119">
+            <state line="45" column="86" selection-start="1185" selection-end="1185" vertical-scroll-proportion="1.4215117">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#379#395#0" expanded="true" />
-                <element signature="e#1495#1505#0" expanded="true" />
-                <element signature="e#3158#3168#0" expanded="true" />
-                <element signature="e#3561#3569#0" expanded="true" />
-                <element signature="e#4402#4410#0" expanded="true" />
+                <element signature="e#397#413#0" expanded="true" />
+                <element signature="e#1502#1512#0" expanded="true" />
+                <element signature="e#3131#3141#0" expanded="true" />
+                <element signature="e#3534#3542#0" expanded="true" />
+                <element signature="e#4375#4383#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,8 +112,8 @@
         <option value="$PROJECT_DIR$/src/wordchains/WordChainWithTree.java" />
         <option value="$PROJECT_DIR$/src/wordchains/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
+        <option value="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
       </list>
     </option>
   </component>
@@ -475,7 +471,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1282" height="805" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -587,14 +583,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="20" selection-start="1276" selection-end="1276" vertical-scroll-proportion="1.7398119">
+        <state line="45" column="86" selection-start="1185" selection-end="1185" vertical-scroll-proportion="1.4215117">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#379#395#0" expanded="true" />
-            <element signature="e#1495#1505#0" expanded="true" />
-            <element signature="e#3158#3168#0" expanded="true" />
-            <element signature="e#3561#3569#0" expanded="true" />
-            <element signature="e#4402#4410#0" expanded="true" />
+            <element signature="e#397#413#0" expanded="true" />
+            <element signature="e#1502#1512#0" expanded="true" />
+            <element signature="e#3131#3141#0" expanded="true" />
+            <element signature="e#3534#3542#0" expanded="true" />
+            <element signature="e#4375#4383#0" expanded="true" />
           </folding>
         </state>
       </provider>

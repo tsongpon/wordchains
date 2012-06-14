@@ -1,7 +1,6 @@
 package newwordchain;
 
 import java.io.*;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +10,8 @@ import java.util.List;
  */
 public class WordChain {
 
+    private String endWord;
+    private int level;
     private TreeNode root;
     private TreeNode targetNode;
     private List<String> wordList;
@@ -18,31 +19,32 @@ public class WordChain {
     private HashMap<String, String> usedWord = new HashMap<String, String>();
 
     public String findWordChain(String start, String end) {
+        endWord = end;
         wordList = initData(start.length());
-        int level = 1;
+        level = 1;
         initTree(start);
 
         boolean foundEndWord = false;
         while (!foundEndWord) {
             nodeList = new ArrayList<TreeNode>();
-            retrieveNodesWithLevel(root, level);
+            retrieveNodesWithLevel(root);
             foundEndWord = growTree(end);
             level++;
         }
 
-        retrieveTargetNode(root, end);
+        retrieveTargetNode(root);
 
         System.out.println("****************CHAIN**************");
         printChain(targetNode);
         return "";
     }
 
-    private void retrieveNodesWithLevel(TreeNode root, int level) {
+    private void retrieveNodesWithLevel(TreeNode root) {
         if (root.getLevel() == level) {
             nodeList.add(root);
         } else {
             for (TreeNode node : root.getChilds()) {
-                retrieveNodesWithLevel(node, level);
+                retrieveNodesWithLevel(node);
             }
         }
     }
@@ -84,15 +86,15 @@ public class WordChain {
         }
     }
 
-    private void retrieveTargetNode(TreeNode root, String targetWord) {
+    private void retrieveTargetNode(TreeNode root) {
         if (root != null) {
-            if (root.getData().equals(targetWord)) {
+            if (root.getData().equals(endWord)) {
                 targetNode = root;
             }
             List<TreeNode> childNodes = root.getChilds();
             if (childNodes != null) {
                 for (TreeNode node : childNodes) {
-                    retrieveTargetNode(node, targetWord);
+                    retrieveTargetNode(node);
                 }
             }
         }
