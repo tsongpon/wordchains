@@ -10,6 +10,15 @@ public class TreeNode {
     private String data;
     private TreeNode parentNode;
     private List<TreeNode> childs;
+    private int level;
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 
     public String getData() {
         return data;

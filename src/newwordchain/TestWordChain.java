@@ -16,6 +16,6 @@ public class TestWordChain {
 
     @Test
     public void testFindChain() {
-        wordChains.findWordChain("CAT", "DOG");
+        wordChains.findWordChain("JAVA", "RUBY");
     }
 }

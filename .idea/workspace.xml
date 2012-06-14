@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490b8d13-2a4a-4143-b080-a95a949c2efc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" afterPath="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newwordchain/TreeNode.java" afterPath="$PROJECT_DIR$/src/newwordchain/TreeNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newwordchain/WordChain.java" afterPath="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
     </list>
     <ignored path="wordchains.iws" />
@@ -64,16 +67,32 @@
       <file leaf-file-name="WordChain.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="47" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.5901116">
+            <state line="54" column="46" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.108013935">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#494#510#0" expanded="true" />
-                <element signature="e#2040#2050#0" expanded="true" />
-                <element signature="e#2805#2815#0" expanded="true" />
-                <element signature="e#4419#4427#0" expanded="true" />
+                <element signature="e#510#520#0" expanded="true" />
+                <element signature="e#582#598#0" expanded="true" />
+                <element signature="e#2268#2278#0" expanded="true" />
+                <element signature="method#printChain#0;class#WordChain#0" expanded="false" />
+                <element signature="method#retrieveTargetNode#0;class#WordChain#0" expanded="false" />
+                <element signature="method#initTree#0;class#WordChain#0" expanded="false" />
+                <element signature="e#3814#3824#0" expanded="true" />
+                <element signature="e#4613#4623#0" expanded="true" />
+                <element signature="method#listAllChain#0;class#WordChain#0" expanded="false" />
+                <element signature="e#6259#6267#0" expanded="true" />
+                <element signature="method#isChainValid#0;class#WordChain#0" expanded="false" />
                 <element signature="method#initData#0;class#WordChain#0" expanded="false" />
-                <element signature="e#5260#5268#0" expanded="true" />
+                <element signature="e#7100#7108#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeNode.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newwordchain/TreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="27" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,10 +100,8 @@
       <file leaf-file-name="TestWordChain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/TestWordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="44" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="18" column="38" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,16 +124,15 @@
         <option value="$PROJECT_DIR$/src/wordchains/WordChainWithTree.java" />
         <option value="$PROJECT_DIR$/src/wordchains/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
+        <option value="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1922" />
-    <option name="height" value="1057" />
+    <option name="width" value="1280" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -132,6 +148,11 @@
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="invalid-module-dependency(module:wordchains,&lt; Oracle JDK 6 &gt;)" />
+    </ignored-problems>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -202,6 +223,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -216,31 +247,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="218" />
-    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="235" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="224" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="224" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="241" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1146" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1148" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1146" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="239" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="233" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -254,7 +275,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
@@ -344,24 +365,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -388,6 +391,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -478,7 +499,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1922" height="1057" extended-state="7" />
+    <frame x="0" y="24" width="1280" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -497,8 +518,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946581" sideWeight="0.7207506" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27924946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878049" sideWeight="0.5648" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4352" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -572,52 +593,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wordchains/TestWordChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="116" selection-end="234" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newwordchain/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="327" selection-end="327" vertical-scroll-proportion="0.3469163">
-          <folding />
-        </state>
+        <state line="10" column="4" selection-start="116" selection-end="234" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wordchains/WordChains.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="116" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="143" column="116" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="397" selection-end="397" vertical-scroll-proportion="0.29411766">
+        <state line="11" column="40" selection-start="397" selection-end="397" vertical-scroll-proportion="0.29411766" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newwordchain/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="27" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newwordchain/TestWordChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="44" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="18" column="38" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="47" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.5901116">
+        <state line="54" column="46" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.108013935">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#494#510#0" expanded="true" />
-            <element signature="e#2040#2050#0" expanded="true" />
-            <element signature="e#2805#2815#0" expanded="true" />
-            <element signature="e#4419#4427#0" expanded="true" />
+            <element signature="e#510#520#0" expanded="true" />
+            <element signature="e#582#598#0" expanded="true" />
+            <element signature="e#2268#2278#0" expanded="true" />
+            <element signature="method#printChain#0;class#WordChain#0" expanded="false" />
+            <element signature="method#retrieveTargetNode#0;class#WordChain#0" expanded="false" />
+            <element signature="method#initTree#0;class#WordChain#0" expanded="false" />
+            <element signature="e#3814#3824#0" expanded="true" />
+            <element signature="e#4613#4623#0" expanded="true" />
+            <element signature="method#listAllChain#0;class#WordChain#0" expanded="false" />
+            <element signature="e#6259#6267#0" expanded="true" />
+            <element signature="method#isChainValid#0;class#WordChain#0" expanded="false" />
             <element signature="method#initData#0;class#WordChain#0" expanded="false" />
-            <element signature="e#5260#5268#0" expanded="true" />
+            <element signature="e#7100#7108#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -662,7 +682,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Oracle JDK 6</last-edited>
+          <last-edited>1.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
