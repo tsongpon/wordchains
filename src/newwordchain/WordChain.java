@@ -1,10 +1,7 @@
 package newwordchain;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,49 +11,26 @@ import java.util.List;
  */
 public class WordChain {
 
-    private int level;
-    private String startWord;
-    private String endWord;
     private TreeNode root;
     private TreeNode targetNode;
     private List<String> wordList;
-    private List<TreeNode> nodeList = new ArrayList<TreeNode>();
+    private List<TreeNode> nodeList;
     private HashMap<String, String> usedWord = new HashMap<String, String>();
 
     public String findWordChain(String start, String end) {
-        startWord = start;
-        endWord = end;
-        wordList = initData(startWord.length());
-        System.out.println("List size before : " + wordList.size());
-        level = 1;
-        initTree(startWord);
-        retrieveNodesWithLevel(root, 1);
-        growTree();
+        wordList = initData(start.length());
+        int level = 1;
+        initTree(start);
 
-        nodeList = new ArrayList<TreeNode>();
-        retrieveNodesWithLevel(root, 2);
-        growTree();
+        boolean foundEndWord = false;
+        while (!foundEndWord) {
+            nodeList = new ArrayList<TreeNode>();
+            retrieveNodesWithLevel(root, level);
+            foundEndWord = growTree(end);
+            level++;
+        }
 
-        nodeList = new ArrayList<TreeNode>();
-        retrieveNodesWithLevel(root, 3);
-        growTree();
-
-        nodeList = new ArrayList<TreeNode>();
-        retrieveNodesWithLevel(root, 4);
-        growTree();
-
-        nodeList = new ArrayList<TreeNode>();
-        retrieveNodesWithLevel(root, 5);
-        growTree();
-
-        nodeList = new ArrayList<TreeNode>();
-        retrieveNodesWithLevel(root, 6);
-        growTree();
-
-
-        //completeTree(root, false);
-        printTree(root);
-        retrieveTargetNode(root, endWord);
+        retrieveTargetNode(root, end);
 
         System.out.println("****************CHAIN**************");
         printChain(targetNode);
@@ -67,15 +41,14 @@ public class WordChain {
         if (root.getLevel() == level) {
             nodeList.add(root);
         } else {
-            if (root.getChilds() != null) {
-                for (TreeNode node : root.getChilds()) {
-                    retrieveNodesWithLevel(node, level);
-                }
+            for (TreeNode node : root.getChilds()) {
+                retrieveNodesWithLevel(node, level);
             }
         }
     }
 
-    private void growTree() {
+    private boolean growTree(String endWord) {
+        boolean found = false;
         for (TreeNode node : nodeList) {
             List<String> chainList = listAllChain(node.getData());
             List<TreeNode> childNodes = new ArrayList<TreeNode>();
@@ -87,10 +60,19 @@ public class WordChain {
                     newNode.setParentNode(node);
                     newNode.setLevel(node.getLevel() + 1);
                     childNodes.add(newNode);
+                    if (endWord.equals(w)) {
+                        found = true;
+                        break;
+                    }
                 }
             }
             node.setChilds(childNodes);
+            if(found) {
+                break;
+            }
         }
+
+        return found;
     }
 
     private void printChain(TreeNode tree) {
@@ -105,7 +87,6 @@ public class WordChain {
     private void retrieveTargetNode(TreeNode root, String targetWord) {
         if (root != null) {
             if (root.getData().equals(targetWord)) {
-                System.out.println("===== FOUND =====");
                 targetNode = root;
             }
             List<TreeNode> childNodes = root.getChilds();
@@ -118,74 +99,20 @@ public class WordChain {
     }
 
     private void initTree(String startWord) {
-        TreeNode rootNode = new TreeNode();
-        root = rootNode;
-        rootNode.setData(startWord);
-        rootNode.setLevel(0);
+        root = new TreeNode();
+        root.setData(startWord);
+        root.setLevel(0);
         List<String> chainList = listAllChain(startWord);
         List<TreeNode> childNodes = new ArrayList<TreeNode>();
         for (String w : chainList) {
             TreeNode node = new TreeNode();
             node.setData(w);
-            node.setParentNode(rootNode);
-            node.setLevel(level);
+            node.setParentNode(root);
+            node.setLevel(root.getLevel() + 1);
             childNodes.add(node);
         }
-        rootNode.setChilds(childNodes);
+        root.setChilds(childNodes);
 
-    }
-
-    private void completeTree(TreeNode root, boolean isFinish) {
-        if (root.getData().equals(endWord)) {
-            // STOP
-        } else {
-            List<TreeNode> childNode = root.getChilds();
-            if (childNode == null || childNode.size() == 0) {
-                //System.out.println("I am leaf : " + root.getData());
-                if (!isFinish) {
-                    List<String> chainList = listAllChain(root.getData());
-                    List<TreeNode> childNodes = new ArrayList<TreeNode>();
-                    int processCount = 0;
-                    for (String w : chainList) {
-                        if (usedWord.get(w) == null) {
-                            TreeNode node = new TreeNode();
-                            node.setData(w);
-                            node.setParentNode(root);
-                            childNodes.add(node);
-                            usedWord.put(w, w);
-                            processCount++;
-                        }
-                    }
-                    root.setChilds(childNodes);
-                    if (processCount > 0) {
-                        completeTree(root, false);
-                    } else {
-                        completeTree(root, true);
-                    }
-                }
-            } else {
-                for (TreeNode node : root.getChilds()) {
-                    completeTree(node, false);
-                }
-            }
-        }
-    }
-
-
-    private void printTree(TreeNode root) {
-        usedWord = new HashMap<String, String>();
-        if (root != null) {
-            System.out.println(root.getData() + " level : " + root.getLevel());
-            List<TreeNode> childNodes = root.getChilds();
-            if (childNodes != null) {
-                for (TreeNode node : childNodes) {
-                    if (usedWord.get(node.getData()) == null) {
-                        printTree(node);
-                        usedWord.put(node.getData(), node.getData());
-                    }
-                }
-            }
-        }
     }
 
     private List<String> listAllChain(String parentWord) {
