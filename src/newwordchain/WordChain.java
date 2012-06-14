@@ -14,33 +14,50 @@ import java.util.List;
  */
 public class WordChain {
 
+    private String startWord;
+    private String endWord;
     private TreeNode root;
+    private TreeNode targetNode;
     private List<String> wordList;
     private HashMap<String, String> usedWord = new HashMap<String, String>();
-    private List<String> testList = new ArrayList<String>();
 
-    public String findWordChain(String startWord, String endWord) {
+    public String findWordChain(String start, String end) {
+        startWord = start;
+        endWord = end;
         wordList = initData(startWord.length());
         System.out.println("List size before : " + wordList.size());
         initTree(startWord);
-//        completeTree(root);
-        printTree(root);
-        System.out.println("*********************************");
-        printLeaf(root);
-//        for (String s : testList) {
-//            System.out.println(s);
-//        }
-//        System.out.println("List size after : " + wordList.size());
-//
-//        System.out.println("*************************************");
-//        wordList = testList;
-//        System.out.println("List size before : " + wordList.size());
-//        initTree(startWord);
-//        for (String s : testList) {
-//            System.out.println(s);
-//        }
-//        System.out.println("List size after : " + wordList.size());
+
+        completeTree(root, false);
+        //printTree(root);
+        retrieveTargetNode(root, endWord);
+        System.out.println("****************CHAIN**************");
+        printChain(targetNode);
         return "";
+    }
+
+    private void printChain(TreeNode tree) {
+        if (tree.getParentNode() == null) {
+            System.out.println(tree.getData());
+        } else {
+            System.out.println(tree.getData());
+            printChain(tree.getParentNode());
+        }
+    }
+
+    private void retrieveTargetNode(TreeNode root, String targetWord) {
+        if (root != null) {
+            if (root.getData().equals(targetWord)) {
+                System.out.println("===== FOUND =====");
+                targetNode = root;
+            }
+            List<TreeNode> childNodes = root.getChilds();
+            if (childNodes != null) {
+                for (TreeNode node : childNodes) {
+                    retrieveTargetNode(node, targetWord);
+                }
+            }
+        }
     }
 
     private void initTree(String startWord) {
@@ -59,12 +76,38 @@ public class WordChain {
 
     }
 
-    private void printLeaf(TreeNode root) {
-        if (root.getChilds() == null || root.getChilds().size() == 0) {
-            System.out.println("I am leaf : " + root.getData());
+    private void completeTree(TreeNode root, boolean isFinish) {
+        if (root.getData().equals(endWord)) {
+            // STOP
         } else {
-            for (TreeNode node : root.getChilds()) {
-                printLeaf(node);
+            List<TreeNode> childNode = root.getChilds();
+            if (childNode == null || childNode.size() == 0) {
+                //System.out.println("I am leaf : " + root.getData());
+                if (!isFinish) {
+                    List<String> chainList = listAllChain(root.getData());
+                    List<TreeNode> childNodes = new ArrayList<TreeNode>();
+                    int processCount = 0;
+                    for (String w : chainList) {
+                        if (usedWord.get(w) == null) {
+                            TreeNode node = new TreeNode();
+                            node.setData(w);
+                            node.setParentNode(root);
+                            childNodes.add(node);
+                            usedWord.put(w, w);
+                            processCount++;
+                        }
+                    }
+                    root.setChilds(childNodes);
+                    if (processCount > 0) {
+                        completeTree(root, false);
+                    } else {
+                        completeTree(root, true);
+                    }
+                }
+            } else {
+                for (TreeNode node : root.getChilds()) {
+                    completeTree(node, false);
+                }
             }
         }
     }

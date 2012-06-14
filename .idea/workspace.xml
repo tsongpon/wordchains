@@ -64,15 +64,15 @@
       <file leaf-file-name="WordChain.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="65" selection-start="2089" selection-end="2089" vertical-scroll-proportion="0.22137405">
+            <state line="93" column="47" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.5901116">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#403#419#0" expanded="true" />
-                <element signature="e#472#480#0" expanded="true" />
-                <element signature="e#1651#1661#0" expanded="true" />
-                <element signature="e#2893#2901#0" expanded="true" />
+                <element signature="e#494#510#0" expanded="true" />
+                <element signature="e#2040#2050#0" expanded="true" />
+                <element signature="e#2805#2815#0" expanded="true" />
+                <element signature="e#4419#4427#0" expanded="true" />
                 <element signature="method#initData#0;class#WordChain#0" expanded="false" />
-                <element signature="e#3734#3742#0" expanded="true" />
+                <element signature="e#5260#5268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +81,7 @@
       <file leaf-file-name="TestWordChain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/TestWordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="116" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+            <state line="18" column="44" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,16 +107,16 @@
         <option value="$PROJECT_DIR$/src/wordchains/WordChainWithTree.java" />
         <option value="$PROJECT_DIR$/src/wordchains/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
+        <option value="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1922" />
-    <option name="height" value="1085" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -478,7 +478,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
+    <frame x="-1" y="24" width="1922" height="1057" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -497,8 +497,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946581" sideWeight="0.72912204" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27087796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946581" sideWeight="0.7207506" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27924946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -600,7 +600,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newwordchain/TestWordChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="116" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+        <state line="18" column="44" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -609,15 +609,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="65" selection-start="2089" selection-end="2089" vertical-scroll-proportion="0.22137405">
+        <state line="93" column="47" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.5901116">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#403#419#0" expanded="true" />
-            <element signature="e#472#480#0" expanded="true" />
-            <element signature="e#1651#1661#0" expanded="true" />
-            <element signature="e#2893#2901#0" expanded="true" />
+            <element signature="e#494#510#0" expanded="true" />
+            <element signature="e#2040#2050#0" expanded="true" />
+            <element signature="e#2805#2815#0" expanded="true" />
+            <element signature="e#4419#4427#0" expanded="true" />
             <element signature="method#initData#0;class#WordChain#0" expanded="false" />
-            <element signature="e#3734#3742#0" expanded="true" />
+            <element signature="e#5260#5268#0" expanded="true" />
           </folding>
         </state>
       </provider>
