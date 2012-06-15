@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/newwordchain/WordChain.java" line="29" mnemonic="1" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="490b8d13-2a4a-4143-b080-a95a949c2efc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" afterPath="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newwordchain/WordChain.java" afterPath="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
     </list>
     <ignored path="wordchains.iws" />
@@ -60,18 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WordChain.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WordChain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="86" selection-start="1185" selection-end="1185" vertical-scroll-proportion="1.4215117">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#397#413#0" expanded="true" />
-                <element signature="e#1502#1512#0" expanded="true" />
-                <element signature="e#3131#3141#0" expanded="true" />
-                <element signature="e#3534#3542#0" expanded="true" />
-                <element signature="e#4375#4383#0" expanded="true" />
-              </folding>
+            <state line="67" column="72" selection-start="2027" selection-end="2027" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,16 +77,25 @@
       <file leaf-file-name="TreeNode.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/TreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+            <state line="17" column="95" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestWordChain.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestWordChain.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/newwordchain/TestWordChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="312" selection-end="316" vertical-scroll-proportion="0.0">
+            <state line="17" column="86" selection-start="277" selection-end="277" vertical-scroll-proportion="0.26431718">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OWL2.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OWL2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="39" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,16 +119,16 @@
         <option value="$PROJECT_DIR$/src/wordchains/WordChainWithTree.java" />
         <option value="$PROJECT_DIR$/src/wordchains/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
         <option value="$PROJECT_DIR$/src/newwordchain/WordChain.java" />
+        <option value="$PROJECT_DIR$/src/newwordchain/TestWordChain.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="-4" />
-    <option name="width" value="1282" />
-    <option name="height" value="805" />
+    <option name="width" value="1922" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -156,6 +163,30 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordchains" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordchains" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,45 +225,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordchains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="218" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="235" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="235" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="224" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="241" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1148" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1146" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1148" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="239" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="233" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -336,6 +343,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -362,24 +387,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -470,8 +477,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1282" height="805" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -484,16 +491,16 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24837662" sideWeight="0.5657492" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43425077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24786325" sideWeight="0.5534188" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46035242" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -557,41 +564,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OWL2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12875" column="5" selection-start="497916" selection-end="497921" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="40" selection-start="397" selection-end="397" vertical-scroll-proportion="0.29411766" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newwordchain/TestWordChain.java">
+    <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="38" selection-start="312" selection-end="316" vertical-scroll-proportion="0.0">
+        <state line="67" column="72" selection-start="2027" selection-end="2027" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newwordchain/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="95" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newwordchain/WordChain.java">
+    <entry file="file://$PROJECT_DIR$/OWL2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="86" selection-start="1185" selection-end="1185" vertical-scroll-proportion="1.4215117">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#397#413#0" expanded="true" />
-            <element signature="e#1502#1512#0" expanded="true" />
-            <element signature="e#3131#3141#0" expanded="true" />
-            <element signature="e#3534#3542#0" expanded="true" />
-            <element signature="e#4375#4383#0" expanded="true" />
-          </folding>
+        <state line="72" column="39" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newwordchain/TestWordChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="86" selection-start="277" selection-end="277" vertical-scroll-proportion="0.26431718">
+          <folding />
         </state>
       </provider>
     </entry>

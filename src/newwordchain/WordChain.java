@@ -69,7 +69,7 @@ public class WordChain {
                 }
             }
             node.setChilds(childNodes);
-            if(found) {
+            if (found) {
                 break;
             }
         }
@@ -163,8 +163,6 @@ public class WordChain {
                     break;
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
