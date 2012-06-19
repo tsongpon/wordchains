@@ -16,9 +16,12 @@ public class TestWordChain {
 
     @Test
     public void testFindChain() {
-        wordChains.findWordChain("BINGO", "RUDDY");
-        //wordChains.findWordChain("JAVA", "RUBY");
-        //wordChains.findWordChain("CAT", "DOG");
-        //wordChains.findWordChain("CAT", "SIT");
+        //wordChains.findWordChain("ILLER", "GENRO");
+        //wordChains.findWordChain("ROES", "UNAU");
+       // wordChains.findWordChain("CAT", "DOG");
+        wordChains.findWordChain("JAVA", "RUBY");
+        //wordChains.findWordChain("BINGO", "RUDDY");
+        //wordChains.findWordChain("CODE", "RUBY");
+        //wordChains.findWordChain("AA", "DE");
     }
 }

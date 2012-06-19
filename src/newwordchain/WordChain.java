@@ -1,8 +1,8 @@
 package newwordchain;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -14,9 +14,9 @@ public class WordChain {
     private int level;
     private TreeNode root;
     private TreeNode targetNode;
-    private List<String> wordList;
-    private List<TreeNode> nodeList;
-    private HashMap<String, String> usedWord = new HashMap<String, String>();
+    private LinkedList<String> wordList;
+    private LinkedList<String> filteredWordList;
+    private LinkedList<TreeNode> nodeList;
 
     public String findWordChain(String start, String end) {
         endWord = end;
@@ -26,13 +26,11 @@ public class WordChain {
 
         boolean foundEndWord = false;
         while (!foundEndWord) {
-            nodeList = new ArrayList<TreeNode>();
+            nodeList = new LinkedList<TreeNode>();
             retrieveNodesWithLevel(root);
             foundEndWord = growTree(end);
             level++;
         }
-
-        retrieveTargetNode(root);
 
         System.out.println("****************CHAIN**************");
         printChain(targetNode);
@@ -43,35 +41,37 @@ public class WordChain {
         if (root.getLevel() == level) {
             nodeList.add(root);
         } else {
-            for (TreeNode node : root.getChilds()) {
-                retrieveNodesWithLevel(node);
+            if (root.getChilds() != null) {
+                for (TreeNode node : root.getChilds()) {
+                    retrieveNodesWithLevel(node);
+                }
             }
         }
     }
 
     private boolean growTree(String endWord) {
+        //System.out.println("nodeList : "+nodeList.size());
         boolean found = false;
         for (TreeNode node : nodeList) {
-            List<String> chainList = listAllChain(node.getData());
-            List<TreeNode> childNodes = new ArrayList<TreeNode>();
-            for (String w : chainList) {
-                if (usedWord.get(w) == null) {
-                    usedWord.put(w, w);
-                    TreeNode newNode = new TreeNode();
-                    newNode.setData(w);
-                    newNode.setParentNode(node);
-                    newNode.setLevel(node.getLevel() + 1);
-                    childNodes.add(newNode);
-                    if (endWord.equals(w)) {
-                        found = true;
-                        break;
-                    }
+            //System.out.println("Data : "+node.getData());
+                LinkedList<String> chainList = listAllChain(node.getData());
+                List<TreeNode> childNodes = new LinkedList<TreeNode>();
+                for (String w : chainList) {
+                        wordList.remove(w);
+                        TreeNode newNode = new TreeNode();
+                        newNode.setData(w);
+                        newNode.setParentNode(node);
+                        newNode.setLevel(node.getLevel() + 1);
+                        childNodes.add(newNode);
+                        if (endWord.equals(w)) {
+                            targetNode = newNode;
+                            return true;
+                        }
                 }
-            }
-            node.setChilds(childNodes);
-            if (found) {
-                break;
-            }
+                node.setChilds(childNodes);
+                if (found) {
+                    return true;
+                }
         }
 
         return found;
@@ -86,39 +86,28 @@ public class WordChain {
         }
     }
 
-    private void retrieveTargetNode(TreeNode root) {
-        if (root != null) {
-            if (root.getData().equals(endWord)) {
-                targetNode = root;
-            }
-            List<TreeNode> childNodes = root.getChilds();
-            if (childNodes != null) {
-                for (TreeNode node : childNodes) {
-                    retrieveTargetNode(node);
-                }
-            }
-        }
-    }
-
     private void initTree(String startWord) {
+        nodeList = new LinkedList<TreeNode>();
         root = new TreeNode();
         root.setData(startWord);
         root.setLevel(0);
-        List<String> chainList = listAllChain(startWord);
-        List<TreeNode> childNodes = new ArrayList<TreeNode>();
+        LinkedList<String> chainList = listAllChain(startWord);
+        List<TreeNode> childNodes = new LinkedList<TreeNode>();
         for (String w : chainList) {
-            TreeNode node = new TreeNode();
-            node.setData(w);
-            node.setParentNode(root);
-            node.setLevel(root.getLevel() + 1);
-            childNodes.add(node);
+                wordList.remove(w);
+                TreeNode node = new TreeNode();
+                node.setData(w);
+                node.setParentNode(root);
+                node.setLevel(root.getLevel() + 1);
+                childNodes.add(node);
+                nodeList.add(node);
         }
         root.setChilds(childNodes);
 
     }
 
-    private List<String> listAllChain(String parentWord) {
-        List<String> chainList = new ArrayList<String>();
+    private LinkedList<String> listAllChain(String parentWord) {
+        LinkedList<String> chainList = new LinkedList<String>();
         for (String word : wordList) {
             if (isChainValid(parentWord, word)) {
                 chainList.add(word);
@@ -145,8 +134,8 @@ public class WordChain {
         return false;
     }
 
-    private List<String> initData(int worSize) {
-        List<String> wordList = new ArrayList<String>();
+    private LinkedList<String> initData(int worSize) {
+        LinkedList<String> wordList = new LinkedList<String>();
         File file = new File("OWL2.txt");
         BufferedReader reader = null;
 
@@ -176,4 +165,21 @@ public class WordChain {
         }
         return wordList;
     }
+
+//    private boolean isCandidate(String word) {
+//        String filterStr = startWord + endWord;
+//        filterStr = filterStr.replaceAll("A", "");
+//        filterStr = filterStr.replaceAll("E", "");
+//        filterStr = filterStr.replaceAll("I", "");
+//        filterStr = filterStr.replaceAll("O", "");
+//        filterStr = filterStr.replaceAll("U", "");
+//        char[] filterChars = filterStr.toCharArray();
+//        for (char c : filterChars) {
+//            if (word.contains(Character.toString(c))) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
 }
