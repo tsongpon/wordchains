@@ -11,7 +11,6 @@ import java.util.List;
 public class WordChain {
 
     private String endWord;
-    private String startNode;
     private int level;
     private TreeNode root;
     private TreeNode targetNode;
