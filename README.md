@@ -1,4 +1,4 @@
 wordchains
 ==========
 
-The compleate sulotion to solve wordchains problem.
+The complete solution to solve wordchains problem.
