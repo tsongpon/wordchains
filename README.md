@@ -12,7 +12,7 @@ cog
 dog
 ````
 
-The objective of this kata is to write a program that accepts start and end words and, using words from the dictionary, builds a word chain between them. Find the shortest word chain that solves each puzzle
+The objective of this kata is to write a program that accepts start and end words and, using words from the dictionary (OWL2.txt), builds a word chain between them. Find the shortest word chain that solves each puzzle
 
 You can turn lead into gold with the following chain:
 
